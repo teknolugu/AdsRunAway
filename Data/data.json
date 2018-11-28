@@ -1,0 +1,5 @@
+[
+  { "Source": "http://pgl.yoyo.org/adservers/serverlist.php", "checked": true },
+  { "Source": "https://hosts-file.net/ad_servers.txt" , "checked" : true},
+  { "Source" : "https://adaway.org/hosts.txt", "checked": true}
+]

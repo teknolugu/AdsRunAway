@@ -1,0 +1,17 @@
+H:\Projects\AdsRunAway\AdsRunAway\bin\Debug\AdsRunAway.exe.config
+H:\Projects\AdsRunAway\AdsRunAway\bin\Debug\AdsRunAway.exe
+H:\Projects\AdsRunAway\AdsRunAway\bin\Debug\AdsRunAway.pdb
+H:\Projects\AdsRunAway\AdsRunAway\bin\Debug\EntityFramework.xml
+H:\Projects\AdsRunAway\AdsRunAway\bin\Debug\EntityFramework.SqlServer.xml
+H:\Projects\AdsRunAway\AdsRunAway\bin\Debug\MyComponents.xml
+H:\Projects\AdsRunAway\AdsRunAway\bin\Debug\Newtonsoft.Json.xml
+H:\Projects\AdsRunAway\AdsRunAway\obj\Debug\AdsRunAway.Form1.resources
+H:\Projects\AdsRunAway\AdsRunAway\obj\Debug\AdsRunAway.Properties.Resources.resources
+H:\Projects\AdsRunAway\AdsRunAway\obj\Debug\AdsRunAway.Starting.resources
+H:\Projects\AdsRunAway\AdsRunAway\obj\Debug\AdsRunAway.csproj.GenerateResource.cache
+H:\Projects\AdsRunAway\AdsRunAway\obj\Debug\AdsRunAway.csproj.CoreCompileInputs.cache
+H:\Projects\AdsRunAway\AdsRunAway\obj\Debug\AdsRunAway.csproj.CopyComplete
+H:\Projects\AdsRunAway\AdsRunAway\obj\Debug\AdsRunAway.exe
+H:\Projects\AdsRunAway\AdsRunAway\obj\Debug\AdsRunAway.pdb
+H:\Projects\AdsRunAway\AdsRunAway\obj\Debug\AdsRunAway.csprojAssemblyReference.cache
+H:\Projects\AdsRunAway\AdsRunAway\obj\Debug\AdsRunAway.About.resources

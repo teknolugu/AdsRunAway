@@ -1,0 +1,6 @@
+H:\Projects\AdsRunAway\AdsRunAway\obj\x64\Debug\AdsRunAway.csprojAssemblyReference.cache
+H:\Projects\AdsRunAway\AdsRunAway\obj\x64\Debug\AdsRunAway.Form1.resources
+H:\Projects\AdsRunAway\AdsRunAway\obj\x64\Debug\AdsRunAway.Properties.Resources.resources
+H:\Projects\AdsRunAway\AdsRunAway\obj\x64\Debug\AdsRunAway.Starting.resources
+H:\Projects\AdsRunAway\AdsRunAway\obj\x64\Debug\AdsRunAway.csproj.GenerateResource.cache
+H:\Projects\AdsRunAway\AdsRunAway\obj\x64\Debug\AdsRunAway.csproj.CoreCompileInputs.cache

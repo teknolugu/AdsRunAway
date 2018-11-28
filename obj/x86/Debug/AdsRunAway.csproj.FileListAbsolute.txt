@@ -1,0 +1,5 @@
+H:\Projects\AdsRunAway\AdsRunAway\obj\x86\Debug\AdsRunAway.Form1.resources
+H:\Projects\AdsRunAway\AdsRunAway\obj\x86\Debug\AdsRunAway.Properties.Resources.resources
+H:\Projects\AdsRunAway\AdsRunAway\obj\x86\Debug\AdsRunAway.Starting.resources
+H:\Projects\AdsRunAway\AdsRunAway\obj\x86\Debug\AdsRunAway.csproj.GenerateResource.cache
+H:\Projects\AdsRunAway\AdsRunAway\obj\x86\Debug\AdsRunAway.csproj.CoreCompileInputs.cache
