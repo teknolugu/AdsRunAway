@@ -237,7 +237,17 @@ namespace AdsRunAway
                 case "DISABLE":
                     {
                         DNSClient.Enable();
-                        HostsManagement.Restore();
+                        try
+                        {
+                            HostsManagement.Restore();
+                        }
+                        catch(Exception ex)
+                        {
+                            DNSClient.Disable();
+                            MessageBox.Show(this, "There is an error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+                        
                         Properties.Settings.Default.Enabled = false;
                         Properties.Settings.Default.Save();
                         Check();
