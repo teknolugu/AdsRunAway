@@ -48,11 +48,11 @@
             this.LblTotal = new System.Windows.Forms.ToolStripStatusLabel();
             this.LblReceived = new System.Windows.Forms.ToolStripStatusLabel();
             this.HostsProcess = new System.Windows.Forms.ToolStripProgressBar();
-            this.materialPanel2 = new MyComponents.MaterialPanel();
+            this.materialPanel2 = new MaterialFramework.MaterialPanel();
             this.LblHostsStatus = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.LblSummary = new System.Windows.Forms.Label();
-            this.BtnApply = new MyComponents.LollipopButton();
+            this.BtnApply = new MaterialFramework.LollipopButton();
             this.LblTitle = new System.Windows.Forms.Label();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -298,6 +298,7 @@
             this.materialPanel2.Controls.Add(this.BtnApply);
             this.materialPanel2.Controls.Add(this.LblTitle);
             this.materialPanel2.Controls.Add(this.shapeContainer2);
+            this.materialPanel2.DarkTheme = false;
             this.materialPanel2.Location = new System.Drawing.Point(20, 32);
             this.materialPanel2.Name = "materialPanel2";
             this.materialPanel2.Size = new System.Drawing.Size(773, 158);
@@ -628,11 +629,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label LblHostsStatus;
         private System.Windows.Forms.Label label3;
-        private MyComponents.MaterialPanel materialPanel2;
+        private MaterialFramework.MaterialPanel materialPanel2;
         private System.Windows.Forms.Label LblTitle;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
-        private MyComponents.LollipopButton BtnApply;
+        private MaterialFramework.LollipopButton BtnApply;
         private System.Windows.Forms.Label LblSummary;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer3;
