@@ -27,7 +27,7 @@ namespace AdsRunAway
         {
             Properties.Settings.Default.FirstLaunch = false;
             Properties.Settings.Default.Save();
-            Form1 frm = new Form1();
+            Main frm = new Main();
             Hide();
             frm.Show();
         }

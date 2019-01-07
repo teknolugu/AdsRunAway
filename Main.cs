@@ -16,12 +16,12 @@ using AdsRunAway.Model;
 
 namespace AdsRunAway
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         DataManagement DataMgmt = new DataManagement();
         StringBuilder builder = new StringBuilder();
         Downloader downloader = new Downloader();
-        public Form1()
+        public Main()
         {
             InitializeComponent();
          

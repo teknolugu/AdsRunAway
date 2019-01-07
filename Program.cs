@@ -27,7 +27,7 @@ namespace AdsRunAway
                 }
                 else
                 {
-                    Application.Run(new Form1());
+                    Application.Run(new Main());
                 }
                 
             }

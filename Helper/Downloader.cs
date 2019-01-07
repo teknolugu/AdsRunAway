@@ -42,7 +42,7 @@ namespace AdsRunAway.Helper
             double bytesIn = double.Parse(e.BytesReceived.ToString());
             double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
             double percentage = bytesIn / totalBytes * 100;
-            Form1 form =new Form1();
+            Main form =new Main();
             //form.SetProgress(int.Parse(Math.Truncate(percentage).ToString()));
             form.SetProgress(e.ProgressPercentage);
         }
