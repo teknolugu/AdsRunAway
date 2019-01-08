@@ -113,18 +113,15 @@ namespace AdsRunAway
 
             try
             {
-                if (HostsManagement.IsFileInUse(new FileInfo(PathInfo.Hosts)) == true)
-                {
+        
                     MessageBox.Show(this, "File is used by another process", "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
+            
                     File.Copy(AppDomain.CurrentDomain.BaseDirectory + @"\merged.txt", PathInfo.Hosts, true);
                     Properties.Settings.Default.Enabled = true;
                     Properties.Settings.Default.Save();
                     MessageBox.Show(this, "Action Successfully Applied, You must restart your computer to take effect!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Check();
-                }
+
             }catch(Exception ex)
             {
                 MessageBox.Show(this, ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
