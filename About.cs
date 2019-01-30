@@ -26,7 +26,7 @@ namespace AdsRunAway
         private void About_Load(object sender, EventArgs e)
         {
             LblVersion.Text = "v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            
+            LblCopyrights.Text = "Copyrights © 2019 ArphaSoftware .Inc";
         }
     }
 }
