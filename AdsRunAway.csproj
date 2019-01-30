@@ -132,6 +132,8 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\ThemeManager.cs" />
+    <Compile Include="Helper\ThemeType.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +216,11 @@
   <ItemGroup>
     <Content Include="AdsRunAway.ico" />
     <Content Include="FodyWeavers.xml" />
+    <None Include="Resources\baseline_close_black_24dp.png" />
+    <None Include="Resources\baseline_done_black_24dp.png" />
+    <None Include="Resources\baseline_help_white_24dp.png" />
+    <None Include="Resources\baseline_help_white_18dp.png" />
+    <None Include="Resources\baseline_settings_white_18dp.png" />
     <None Include="Resources\baseline_settings_black_18dp.png" />
     <None Include="Resources\help_black_24dp.png" />
     <None Include="Resources\help_black_18dp.png" />

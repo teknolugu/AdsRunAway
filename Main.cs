@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using AdsRunAway.Helper;
-using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 using System.Net;
-using System.Threading;
 using Newtonsoft.Json;
 using AdsRunAway.Model;
 
@@ -45,10 +41,6 @@ namespace AdsRunAway
             TopMost = top;
         }
 
-        public void SetProgress(int progress)
-        {
-            HostsProcess.Value = progress;
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -74,7 +66,6 @@ namespace AdsRunAway
           
         }
       
-
 
         #region hostsProcess
         void Finish()
@@ -113,9 +104,6 @@ namespace AdsRunAway
 
             try
             {
-        
-                    MessageBox.Show(this, "File is used by another process", "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
                     File.Copy(AppDomain.CurrentDomain.BaseDirectory + @"\merged.txt", PathInfo.Hosts, true);
                     Properties.Settings.Default.Enabled = true;
                     Properties.Settings.Default.Save();
@@ -153,19 +141,34 @@ namespace AdsRunAway
         private void BtnTabBlock_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabPage1;
-            PanelSelector.Location = new Point(12, 94);
+            PanelSelector.Location = new Point(9, 91);
             PanelSelector.Size = new Size(50, 3);
             BtnTabHost.ForeColor = Color.Silver;
             BtnTabOther.ForeColor = Color.Silver;
-            BtnTabBlock.ForeColor= Color.Black;
+            if (Properties.Settings.Default.Dark == true){
+                BtnTabBlock.ForeColor = Color.White;
+            }
+            else {
+                BtnTabBlock.ForeColor = Color.Black;
+            }
+           
+            
         }
 
         private void BtnTabHost_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabPage2;
-            PanelSelector.Location = new Point(77, 94);
+            PanelSelector.Location = new Point(75, 91);
             PanelSelector.Size = new Size(100, 3);
-            BtnTabHost.ForeColor = Color.Black;
+            if(Properties.Settings.Default.Dark == true)
+            {
+                BtnTabHost.ForeColor = Color.White;
+            }
+            else
+            {
+                BtnTabHost.ForeColor = Color.Black;
+            }
+           
             BtnTabBlock.ForeColor = Color.Silver;
             BtnTabOther.ForeColor = Color.Silver;
         }
@@ -219,6 +222,13 @@ namespace AdsRunAway
                             case DialogResult.Yes:
                                 {
                                     DNSClient.Disable();
+                                    try
+                                    {
+                                        HostsManagement.Backup();
+                                    } catch (Exception ex)
+                                    {
+                                        MessageBox.Show(this, ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
                                     DownloadFile();
                                     break;
                                 }
@@ -252,25 +262,6 @@ namespace AdsRunAway
                     }
             }
           
-        }
-
-
-      
-        private void BtnDone_Click(object sender, EventArgs e)
-        {
-            if(TxtNewSource.Text == "")
-            {
-                MessageBox.Show(this, "Value cannot be null", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                DataMgmt.Insert(TxtNewSource.Text);
-                checkedListBox1.Items.Clear();
-                GetHostsSource();
-            }
-            TxtNewSource.Visible = false;
-            BtnDone.Visible = false;
-           
         }
 
         private void TxtNewSource_KeyPress(object sender, KeyPressEventArgs e)
@@ -337,6 +328,7 @@ namespace AdsRunAway
         {
             TxtNewSource.Visible = true;
             BtnDone.Visible = true;
+            BtnCancel.Visible = true;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -357,12 +349,88 @@ namespace AdsRunAway
 
         private void BtnTabOther_Click(object sender, EventArgs e)
         {
-            PanelSelector.Location = new Point(193, 93);
+            PanelSelector.Location = new Point(190, 91);
             PanelSelector.Size = new Size(50, 3);
             tabControl1.SelectedTab = tabPage3;
-            BtnTabOther.ForeColor = Color.Black;
+            if(Properties.Settings.Default.Dark == true)
+            {
+                BtnTabOther.ForeColor = Color.White;
+            }
+            else
+            {
+                BtnTabOther.ForeColor = Color.Black;
+            }
+            
             BtnTabBlock.ForeColor = Color.Silver;
             BtnTabHost.ForeColor = Color.Silver;
+        }
+
+        private void darkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void BtnDone_Click(object sender, EventArgs e)
+        {
+            if (TxtNewSource.Text == "")
+            {
+                MessageBox.Show(this, "Value cannot be null", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DataMgmt.Insert(TxtNewSource.Text);
+                checkedListBox1.Items.Clear();
+                GetHostsSource();
+            }
+            TxtNewSource.Visible = false;
+            BtnDone.Visible = false;
+            BtnCancel.Visible = false;
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            TxtNewSource.Visible = false;
+            BtnDone.Visible = false;
+            BtnCancel.Visible = false;
+        }
+
+        private void lightToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void ApplyTheme(ThemeType theme)
+        {
+            ThemeManager themeManager = new ThemeManager();
+            List<Color> darkColor = themeManager.ApplyTheme(theme);
+            //Apply Theme
+            BackColor = darkColor[0];
+            PanelMain.DarkTheme = true;
+            PanelHeader.DarkTheme = true;
+
+            tabPage1.BackColor = darkColor[0];
+            tabPage2.BackColor = darkColor[0];
+            tabPage3.BackColor = darkColor[0];
+
+            ForeColor = Color.White;
+            lineShape2.BorderColor = darkColor[0];
+
+            BtnApply.BGColor = "#2D2D2D";
+            PanelSelector.BackColor = ColorTranslator.FromHtml("#3498db");
+
+            statusStrip1.BackColor = ColorTranslator.FromHtml("#2D2D2D");
+            lineShape3.BorderColor = lineShape2.BorderColor;
+
+            LblTitle.ForeColor = Color.WhiteSmoke;
+            label3.ForeColor = Color.White;
+
+            LinkSettings.Image = Properties.Resources.baseline_settings_white_18dp;
+            LinkAbout.Image = Properties.Resources.baseline_help_white_24dp;
+            LblSummary.ForeColor = Color.White;
+
+            //save settings
+            Properties.Settings.Default.Dark = true;
+            Properties.Settings.Default.Save();
         }
     }
 }

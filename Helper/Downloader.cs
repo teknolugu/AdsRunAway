@@ -9,10 +9,12 @@ using AdsRunAway.Model;
 
 namespace AdsRunAway.Helper
 {
-    class Downloader
+    internal class Downloader
     {
-        StringBuilder builder = new StringBuilder();
+        private StringBuilder builder = new StringBuilder();
+
         internal delegate void DownloadProgressDelegate(int ProgressPercentage);
+
         internal event DownloadProgressDelegate DownloadProgress;
 
         public async void DownloadFile(string url)
@@ -42,9 +44,9 @@ namespace AdsRunAway.Helper
             double bytesIn = double.Parse(e.BytesReceived.ToString());
             double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
             double percentage = bytesIn / totalBytes * 100;
-            Main form =new Main();
+            Main form = new Main();
             //form.SetProgress(int.Parse(Math.Truncate(percentage).ToString()));
-            form.SetProgress(e.ProgressPercentage);
+            //form.SetProgress(e.ProgressPercentage);
         }
     }
 }

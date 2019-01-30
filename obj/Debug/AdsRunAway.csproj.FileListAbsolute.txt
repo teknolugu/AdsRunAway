@@ -22,8 +22,8 @@ D:\Projects\AdsRunAway\bin\Debug\EntityFramework.xml
 D:\Projects\AdsRunAway\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\AdsRunAway\bin\Debug\MaterialFramework.xml
 D:\Projects\AdsRunAway\bin\Debug\Newtonsoft.Json.xml
-D:\Projects\AdsRunAway\obj\Debug\AdsRunAway.csprojAssemblyReference.cache
 D:\Projects\AdsRunAway\obj\Debug\AdsRunAway.About.resources
+D:\Projects\AdsRunAway\obj\Debug\AdsRunAway.Main.resources
 D:\Projects\AdsRunAway\obj\Debug\AdsRunAway.Properties.Resources.resources
 D:\Projects\AdsRunAway\obj\Debug\AdsRunAway.Starting.resources
 D:\Projects\AdsRunAway\obj\Debug\AdsRunAway.csproj.GenerateResource.cache
@@ -31,4 +31,4 @@ D:\Projects\AdsRunAway\obj\Debug\AdsRunAway.csproj.CoreCompileInputs.cache
 D:\Projects\AdsRunAway\obj\Debug\AdsRunAway.csproj.CopyComplete
 D:\Projects\AdsRunAway\obj\Debug\AdsRunAway.exe
 D:\Projects\AdsRunAway\obj\Debug\AdsRunAway.pdb
-D:\Projects\AdsRunAway\obj\Debug\AdsRunAway.Main.resources
+D:\Projects\AdsRunAway\obj\Debug\AdsRunAway.csprojAssemblyReference.cache

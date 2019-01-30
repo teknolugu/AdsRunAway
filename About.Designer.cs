@@ -34,6 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.LblVersion = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.LblCopyrights = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -49,7 +50,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(16, 245);
+            this.linkLabel1.Location = new System.Drawing.Point(16, 243);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(159, 13);
             this.linkLabel1.TabIndex = 2;
@@ -61,7 +62,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 219);
+            this.label3.Location = new System.Drawing.Point(16, 217);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 17);
             this.label3.TabIndex = 3;
@@ -82,18 +83,29 @@
             this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Enabled = false;
-            this.richTextBox1.Location = new System.Drawing.Point(19, 99);
+            this.richTextBox1.Location = new System.Drawing.Point(19, 97);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(485, 117);
             this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = "AdsRunAway is a software for block ads when you surfing in the internet";
+            // 
+            // LblCopyrights
+            // 
+            this.LblCopyrights.AutoSize = true;
+            this.LblCopyrights.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCopyrights.Location = new System.Drawing.Point(16, 277);
+            this.LblCopyrights.Name = "LblCopyrights";
+            this.LblCopyrights.Size = new System.Drawing.Size(61, 17);
+            this.LblCopyrights.TabIndex = 6;
+            this.LblCopyrights.Text = "Copyright";
             // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(516, 285);
+            this.ClientSize = new System.Drawing.Size(516, 315);
+            this.Controls.Add(this.LblCopyrights);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.LblVersion);
             this.Controls.Add(this.label3);
@@ -101,7 +113,6 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(532, 324);
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
@@ -118,5 +129,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LblVersion;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label LblCopyrights;
     }
 }

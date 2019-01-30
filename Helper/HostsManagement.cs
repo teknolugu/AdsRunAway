@@ -3,32 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 using System.IO;
 using AdsRunAway.Model;
 
 namespace AdsRunAway.Helper
 {
     class HostsManagement
-    {
-        public static void Merge(string path1, string path2)
+    { 
+        public static void Backup()
         {
-
-        }
-
-        public static bool IsFileInUse(FileInfo file)
-        {
-            bool Used = false;
-            FileStream fs = null;
-            try
-            {
-                fs = file.Open(FileMode.Open, FileAccess.Read, FileShare.None);
-            }
-            catch
-            {
-                Used = true;
-            }
-            fs.Dispose();
-            return Used;
+           
+                if (File.Exists(PathInfo.Hosts) == true)
+                {
+                    File.Copy(PathInfo.Hosts, PathInfo.Hosts + ".bak", true);
+                }
+          
         }
         public static void Create()
         {
@@ -75,10 +65,6 @@ namespace AdsRunAway.Helper
 
             File.Create(PathInfo.Hosts).Close();
             File.WriteAllText(PathInfo.Hosts, DefaultHosts);
-        }
-        public static void Backup(string backupLocation)
-        {
-
         }
         public static void SetPermission(Permission permission)
         {
